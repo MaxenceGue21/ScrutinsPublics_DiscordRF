@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrutins publics (RF - Assemblée nationale)</title>
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-- * Main content of the page-->
+    <main>
+      <!-- Header of the page-->
+      <header>
+        <h1 class="headerTitle">Fiche de calcul des scrutins publics</h1>
+        <div class="subtitleHeaderContainer">
+          <img
+            class="iconRF"
+            src="./img/iconRF.jpg"
+            alt="Icône de référence : Discord « République française »"
+          />
+          <h2 class="subtitleHeader">©️ @maxence21 - RF 2023 (Discord) ©️</h2>
+          <img
+            class="iconAN"
+            src="./img/iconAN.jpg"
+            alt="Icône de référence : Discord « République française » (Assemblée nationale)"
+          />
+        </div>
+      </header>
+      <div class="horizontalLine"></div>
+      <!-- Form-->
+      <section class="formContainer">
+        <h2 class="formTitle">Renseignez les résultats</h2>
+        <form class="form">
+          <!-- ? Votes pour-->
+          <label for="pour">
+            Votes <span style="color: #338153; font-weight: bold">pour</span> :
+            <input type="text" id="pour" name="votes_pour" required />
+          </label>
+          <!-- ? Votes contre-->
+          <label for="contre">
+            Votes
+            <span style="color: #e43c41; font-weight: bold">contre</span> :
+            <input type="text" id="contre" name="votes_contre" required />
+          </label>
+          <!-- ? Abstention-->
+          <label for="abstention">
+            <span style="color: black; font-weight: bold">Abstention</span> :
+            <input type="text" id="abstention" name="abst" required />
+          </label>
+          <!-- ? Button-->
+          <div class="formButtonsContainer">
+            <button type="reset" class="resetButton">Réinitialiser</button>
+            <button type="submit" class="submitButton" id="submitButton">
+              Valider
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

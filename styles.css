@@ -1,0 +1,90 @@
+/* ! RESET CSS*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+/* * Main content of the page*/
+/* Header of the page*/
+.headerTitle {
+  font-size: 1.5em;
+  text-align: center;
+  color: #e43c41;
+}
+.subtitleHeaderContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.iconRF,
+.iconAN {
+  width: 40px;
+}
+.subtitleHeader {
+  font-size: 15px;
+}
+
+.horizontalLine {
+  margin-top: 10px;
+  height: 3px;
+  width: 100%;
+  background-color: black;
+}
+/* Form*/
+.formContainer {
+  margin-top: 30px;
+}
+.formTitle {
+  color: #233f6b;
+  font-size: 2em;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  margin-top: 10px;
+}
+.formButtonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.resetButton {
+  padding: 5px;
+  font-size: 0.7em;
+  font-weight: bold;
+  background-color: rgba(255, 45, 45, 0.829);
+  color: black;
+}
+.submitButton {
+  padding: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: rgb(106, 211, 8);
+  color: black;
+}
+.resetButton:active {
+  color: rgba(255, 45, 45, 0.829);
+  background-color: black;
+}
+.submitButton:active {
+  color: rgb(106, 211, 8);
+  background-color: black;
+}
+
+/* ! Media queries*/
+@media screen and (min-width: 550px) {
+  .headerTitle {
+    margin-top: 10px;
+  }
+  .subtitleHeaderContainer {
+    justify-content: space-around;
+  }
+}

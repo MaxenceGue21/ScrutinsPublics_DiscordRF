@@ -57,26 +57,65 @@ label {
   margin-top: 20px;
 }
 .resetButton {
-  padding: 5px;
-  font-size: 0.7em;
-  font-weight: bold;
-  background-color: rgba(255, 45, 45, 0.829);
-  color: black;
+  background: rgb(206, 97, 74);
+  background: linear-gradient(
+    90deg,
+    rgba(206, 97, 74, 1) 0%,
+    rgba(173, 72, 71, 1) 100%
+  );
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 1em;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      90deg,
+      rgba(206, 97, 74, 1) 0%,
+      rgba(173, 72, 71, 1) 100%
+    )
+    1;
+  cursor: pointer;
 }
 .submitButton {
-  padding: 5px;
+  background: rgb(153, 194, 33);
+  background: linear-gradient(
+    90deg,
+    rgba(153, 194, 33, 1) 0%,
+    rgba(104, 165, 50, 1) 100%
+  );
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
   font-size: 1.2em;
   font-weight: bold;
-  background-color: rgb(106, 211, 8);
-  color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      90deg,
+      rgba(153, 194, 33, 1) 0%,
+      rgba(104, 165, 50, 1) 100%
+    )
+    1;
+  cursor: pointer;
 }
-.resetButton:active {
-  color: rgba(255, 45, 45, 0.829);
-  background-color: black;
+.submitButton:hover {
+  background: black;
+  color: aqua;
 }
 .submitButton:active {
-  color: rgb(106, 211, 8);
-  background-color: black;
+  background: green;
+  color: white;
+}
+.resetButton:hover {
+  background: black;
+  color: aqua;
+}
+.resetButton:active {
+  background: #a70d07;
+  color: white;
 }
 
 /* ! Media queries*/
@@ -86,5 +125,14 @@ label {
   }
   .subtitleHeaderContainer {
     justify-content: space-around;
+  }
+}
+@media screen and (max-width: 350px) {
+  .formButtonsContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+    margin-top: 20px;
   }
 }

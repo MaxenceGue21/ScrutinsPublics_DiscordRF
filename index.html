@@ -52,13 +52,18 @@
           </label>
           <!-- ? Abstention-->
           <label for="abstention">
-            <span style="color: black; font-weight: bold">Abstention</span> :
+            <span style="color: #e76b2e; font-weight: bold">Abstentions</span> :
             <input type="text" id="abstention" name="abst" required />
           </label>
           <!-- ? Button-->
           <div class="formButtonsContainer">
             <button type="reset" class="resetButton">Réinitialiser</button>
-            <button type="submit" class="submitButton" id="submitButton">
+            <button
+              type="submit"
+              class="submitButton"
+              id="submitButton"
+              onclick="calculate()"
+            >
               Valider
             </button>
           </div>

@@ -8,6 +8,10 @@
 
 /* * Main content of the page*/
 /* Header of the page*/
+header {
+  background-color: #004990;
+  border: solid #004990 3px;
+}
 .headerTitle {
   font-size: 1.5em;
   text-align: center;
@@ -15,9 +19,11 @@
 }
 .subtitleHeaderContainer {
   margin-top: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: yellow;
 }
 .iconRF,
 .iconAN {
@@ -28,8 +34,7 @@
 }
 
 .horizontalLine {
-  margin-top: 10px;
-  height: 3px;
+  height: 6px;
   width: 100%;
   background-color: black;
 }

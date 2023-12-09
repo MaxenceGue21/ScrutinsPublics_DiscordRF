@@ -1,3 +1,30 @@
+// * Effet de noël : guirlande autour du header de la page. Fonction qui change, de manière périodique, la couleur de la bordure.
+document.addEventListener("DOMContentLoaded", function () {
+  var guirlandeSection = document.querySelector("header");
+  var couleursGuirlande = [
+    "#d00000", // ROUGE
+    "#40a02a", // VERT
+    "#f3cc50", // JAUNE (Gold)
+    "#77b5fe", // BLEU
+    "#ff8a11", // ORANGE
+  ];
+
+  var intervalleChangementCouleur = 500;
+
+  // Fonction pour changer la couleur de la bordure de la guirlande.
+  function changerCouleurGuirlande() {
+    var couleur =
+      couleursGuirlande[Math.floor(Math.random() * couleursGuirlande.length)];
+    guirlandeSection.style.borderColor = couleur;
+  }
+
+  // Applique l'effet de guirlande en changeant la couleur à intervalles réguliers
+  var guirlandeInterval = setInterval(
+    changerCouleurGuirlande,
+    intervalleChangementCouleur
+  );
+});
+
 // * Fonction "calculate" qui est appelée lors du clique sur le bouton "Valider".
 function calculate() {
   // Définition des variables qui sauvegardent les valeurs mises dans les inputs du formulaire.

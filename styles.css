@@ -10,8 +10,8 @@
 /* Header of the page*/
 header {
   background-color: #004990;
-  /* border: solid #004990 2px; */ /* TODO Retirée car effet noël*/
-  border: dotted white 8px;
+  border: solid #004990 2px;
+  /* border: dotted white 8px; */ /* TODO Effet noël*/
 }
 .headerTitle {
   font-size: 1.5em;
@@ -143,7 +143,7 @@ label {
   }
 }
 /* TODO Media querie : effet noël*/
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   header {
     background-color: #004990;
     border: dotted white 7px;
@@ -154,4 +154,4 @@ label {
     background-color: #004990;
     border: dotted white 4px;
   }
-}
+} */

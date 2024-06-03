@@ -33,9 +33,21 @@ function calculate() {
   let abst = document.getElementById("abstention").value;
 
   // Calcul suivant les règles des scrutins publics.
-  let votants = Number(votes_pour) + Number(votes_contre) + Number(abst);
-  let exprimes = Number(votes_pour) + Number(votes_contre);
-  let majorite = Number(exprimes) / 2;
+  // Mise en place des règles de conversion des nombres.
+  const depute = 577 / 37;
+  let votes_pour_convertis = votes_pour * depute;
+  let votes_contre_convertis = votes_contre * depute;
+  let abst_convertis = abst * depute;
+
+  // Utilisation des nombres convertis dans les résultats.
+  let votants =
+    Number(Math.trunc(votes_pour_convertis)) +
+    Number(Math.trunc(votes_contre_convertis)) +
+    Number(Math.trunc(abst_convertis));
+  let exprimes =
+    Number(Math.trunc(votes_pour_convertis)) +
+    Number(Math.trunc(votes_contre_convertis));
+  let majorite = Number(Math.trunc(exprimes)) / 2;
 
   // Modification du résultat de la majorité absolue selon que le résultat obtenu soit un nombre entier ou un nombre décimal.
   if (Number.isInteger(majorite)) {
@@ -49,9 +61,9 @@ function calculate() {
           "\n - Majorité absolue : " +
           majorite2 +
           "\n\n - POUR : " +
-          votes_pour +
+          Math.trunc(votes_pour_convertis) +
           "\n - CONTRE : " +
-          votes_contre +
+          Math.trunc(votes_contre_convertis) +
           "\n\n L'Assemblée nationale a adopté."
       );
     } else if (votes_contre >= votes_pour) {
@@ -63,9 +75,9 @@ function calculate() {
           "\n - Majorité absolue : " +
           majorite2 +
           "\n\n - POUR : " +
-          votes_pour +
+          Math.trunc(votes_pour_convertis) +
           "\n - CONTRE : " +
-          votes_contre +
+          Math.trunc(votes_contre_convertis) +
           "\n\n L'Assemblée nationale n'a pas adopté."
       );
     }
@@ -80,9 +92,9 @@ function calculate() {
           "\n - Majorité absolue : " +
           majorite3 +
           "\n\n - POUR : " +
-          votes_pour +
+          Math.trunc(votes_pour_convertis) +
           "\n - CONTRE : " +
-          votes_contre +
+          Math.trunc(votes_contre_convertis) +
           "\n\n L'Assemblée nationale a adopté."
       );
     } else if (votes_contre >= votes_pour) {
@@ -94,9 +106,9 @@ function calculate() {
           "\n - Majorité absolue : " +
           majorite3 +
           "\n\n - POUR : " +
-          votes_pour +
+          Math.trunc(votes_pour_convertis) +
           "\n - CONTRE : " +
-          votes_contre +
+          Math.trunc(votes_contre_convertis) +
           "\n\n L'Assemblée nationale n'a pas adopté."
       );
     }

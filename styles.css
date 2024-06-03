@@ -16,22 +16,18 @@ header {
 .headerTitle {
   font-size: 1.5em;
   text-align: center;
-  color: #e43c41;
+  color: #ee2930;
 }
 .subtitleHeaderContainer {
   margin-top: 20px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  color: yellow;
+  justify-content: space-around;
 }
 .iconRF,
 .iconAN {
   width: 40px;
-}
-.subtitleHeader {
-  font-size: 15px;
 }
 
 .horizontalLine {
@@ -63,83 +59,96 @@ label {
   margin-top: 20px;
 }
 .resetButton {
-  background: rgb(206, 97, 74);
-  background: linear-gradient(
-    90deg,
-    rgba(206, 97, 74, 1) 0%,
-    rgba(173, 72, 71, 1) 100%
-  );
-  padding-top: 3px;
-  padding-bottom: 3px;
+  background: #d00000;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-right: 25px;
   padding-left: 25px;
   font-size: 1em;
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
-  border-image: linear-gradient(
-      90deg,
-      rgba(206, 97, 74, 1) 0%,
-      rgba(173, 72, 71, 1) 100%
-    )
-    1;
+  border-color: black;
   cursor: pointer;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 .submitButton {
   background: rgb(153, 194, 33);
-  background: linear-gradient(
-    90deg,
-    rgba(153, 194, 33, 1) 0%,
-    rgba(104, 165, 50, 1) 100%
-  );
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-right: 30px;
-  padding-left: 30px;
-  font-size: 1.2em;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 1em;
   font-weight: bold;
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
-  border-image: linear-gradient(
-      90deg,
-      rgba(153, 194, 33, 1) 0%,
-      rgba(104, 165, 50, 1) 100%
-    )
-    1;
+  border-color: black;
   cursor: pointer;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 .submitButton:hover {
-  background: black;
-  color: aqua;
+  box-shadow: 0px 0px 40px rgb(153, 194, 33);
 }
 .submitButton:active {
   background: green;
   color: white;
 }
 .resetButton:hover {
-  background: black;
-  color: aqua;
+  box-shadow: 0px 0px 35px #d00000;
 }
 .resetButton:active {
   background: #a70d07;
   color: white;
 }
+/* Footer*/
+.elementFooter {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: black;
+  font-size: 0.7em;
+}
+.copyrightIcon {
+  color: #ff8a11;
+  font-size: 1.2em;
+}
 
 /* ! Media queries*/
-@media screen and (min-width: 550px) {
-  .headerTitle {
-    margin-top: 10px;
+@media screen and (max-width: 440px) {
+  .formTitle {
+    font-size: 1.6em;
   }
-  .subtitleHeaderContainer {
-    justify-content: space-around;
+  .formButtonsContainer {
+    flex-direction: column-reverse;
+    width: 50%;
+    gap: 15px;
+  }
+  .submitButton:hover {
+    box-shadow: 0px 0px 20px rgb(153, 194, 33);
+  }
+  .resetButton:hover {
+    box-shadow: 0px 0px 15px #d00000;
   }
 }
-@media screen and (max-width: 350px) {
-  .formButtonsContainer {
-    width: 50%;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 15px;
-    margin-top: 20px;
+@media screen and (max-width: 390px) {
+  .resetButton {
+    letter-spacing: 0em;
+  }
+  .submitButton {
+    letter-spacing: 0em;
+  }
+}
+@media screen and (max-width: 340px) {
+  .resetButton {
+    font-size: 0.8em;
+  }
+  .submitButton {
+    font-size: 0.8em;
   }
 }
 /* TODO Media querie : effet noël*/
